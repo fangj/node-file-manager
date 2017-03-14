@@ -151,7 +151,7 @@
       <tr class="sortable" ng-repeat="file in FM.curFiles | orderBy:'folder'">
         <td><input type="checkbox" value="{{file.name}}" ng-model="file.selected"></td>
         <td ng-click="FM.clickFile(file)"><span class="{{file.folder ? 'glyphicon glyphicon-folder-open' : 'glyphicon glyphicon-file'}}"></span></td>
-        <td ng-click="FM.clickFile(file)"><a href="{{file.folder?'#'+file.relPath:'api'+file.relPath}}">{{file.name}}</a></td>
+        <td><a href="{{file.folder?'#'+file.relPath:'api'+file.relPath}}" target="_blank">{{file.name}}</a></td>
         <td>{{file.humanSize}}</td>
         <td>{{file.humanTime}}</td>
       </tr>
